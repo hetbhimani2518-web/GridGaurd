@@ -134,7 +134,7 @@
                         android:layout_marginBottom="10dp"
                         android:padding="13dp"
                         android:text="@string/sign_in"
-                        android:textColor="#000000"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:backgroundTint="#877A73"

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GridGaurd">
         <activity
+            android:name=".cust_home_dashboard"
+            android:exported="false" />
+        <activity
             android:name=".cust_signup"
             android:exported="false" />
         <activity
