@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">GridGaurd</string>
+    <string name="background">background</string>
+    <string name="select_your_role">Select Your Role</string>
+    <string name="please_select_your_user_type_to_continue">Please select your user type to continue</string>
+    <string name="admin_icon">Admin Icon</string>
+    <string name="customer">Customer</string>
+    <string name="faculty_icon">Faculty Icon</string>
+    <string name="utility_officer">Utility Officer</string>
+    <string name="student_icon">Student Icon</string>
+    <string name="field_technician">Field Technician</string>
+    <string name="customer_sign_in">Customer Sign-In</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="customer_id">Customer ID</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="new_user_register_here">New user? Register here</string>
+    <string name="_2025_guvnl">©2025 GUVNL</string>
 </resources>
