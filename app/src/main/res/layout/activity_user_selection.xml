@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     android:fillViewport="true"
     tools:context=".user_selection">
 
@@ -11,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.4"
+        android:contentDescription="@string/background"
         android:scaleType="centerCrop"
         android:src="@drawable/selection_back_tower" />
 
     <ScrollView
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -30,7 +31,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="Select Your Role"
+                android:text="@string/select_your_role"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="34sp"
@@ -44,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:text="Please select your user type to continue"
+                android:text="@string/please_select_your_user_type_to_continue"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -54,7 +55,7 @@
 
             <!-- User Option 1 -->
             <LinearLayout
-                android:id="@+id/optionAdmin"
+                android:id="@+id/optionCustomer"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
@@ -70,15 +71,14 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="Admin Icon"
+                    android:contentDescription="@string/admin_icon"
                     android:src="@drawable/customer"
                     />
-
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Customer"
+                    android:text="@string/customer"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -86,7 +86,7 @@
 
             <!-- User Option 2 -->
             <LinearLayout
-                android:id="@+id/optionFaculty"
+                android:id="@+id/optionOfficer"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
@@ -96,19 +96,19 @@
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/optionAdmin">
+                app:layout_constraintTop_toBottomOf="@id/optionCustomer">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="Faculty Icon"
+                    android:contentDescription="@string/faculty_icon"
                     android:src="@drawable/admin" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Utility Officer"
+                    android:text="@string/utility_officer"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -116,7 +116,7 @@
 
             <!-- User Option 3 -->
             <LinearLayout
-                android:id="@+id/optionStudent"
+                android:id="@+id/optionTechnician"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
@@ -126,20 +126,20 @@
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/optionFaculty">
+                app:layout_constraintTop_toBottomOf="@id/optionOfficer">
 
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginEnd="16dp"
-                    android:contentDescription="Student Icon"
+                    android:contentDescription="@string/student_icon"
                     android:src="@drawable/tachnician" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Field Technician"
+                    android:text="@string/field_technician"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
