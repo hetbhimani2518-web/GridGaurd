@@ -117,7 +117,7 @@
                     app:cardElevation="4dp"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@id/cardTrackComplaints"
-                    app:layout_constraintHorizontalWeight="1"
+                    app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -155,7 +155,7 @@
                     app:cardElevation="4dp"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontalWeight="1"
+                    app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toEndOf="@id/cardReportOutage"
                     app:layout_constraintTop_toTopOf="@id/cardReportOutage">
 
@@ -194,7 +194,7 @@
                     app:cardElevation="4dp"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@id/cardHistory"
-                    app:layout_constraintHorizontalWeight="1"
+                    app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardReportOutage">
 
@@ -232,7 +232,7 @@
                     app:cardElevation="4dp"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontalWeight="1"
+                    app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toEndOf="@id/cardViewBill"
                     app:layout_constraintTop_toBottomOf="@id/cardTrackComplaints">
 
@@ -271,7 +271,7 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintHorizontalWeight="1"
+                    app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cardViewBill">
 
@@ -310,7 +310,7 @@
                     app:cardElevation="4dp"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontalWeight="1"
+                    app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toEndOf="@id/cardViewAlerts"
                     app:layout_constraintTop_toBottomOf="@id/cardHistory">
 
