@@ -29,7 +29,7 @@
     <string name="report">Report</string>
     <string name="history">History</string>
     <string name="profile">Profile</string>
-    <string name="dummy_gretting">Welcome, User</string>
+    <string name="dummy_gretting">Welcome, Het</string>
     <string name="dummy_gretting_2">Customer Id: 12345678</string>
     <string name="settings">Settings</string>
     <string name="dummy_announcment">Planned maintenance on 10 Oct 2025: some areas will have scheduled outage. Click for details.</string>
@@ -39,7 +39,7 @@
     <string name="track_complaints">Track Complaints</string>
     <string name="quick_actions">Quick Actions</string>
     <string name="recent_activity">Recent Activity</string>
-    <string name="customer_care">customer_care</string>
+    <string name="customer_care">Customer Care</string>
     <string name="contact_customer_care">Contact Customer Care</string>
     <string name="call">Call</string>
     <string name="report_outage">Report Outage</string>

@@ -5,10 +5,11 @@
     <color name="purple_500">#9C27B0</color>
     <color name="teal_50">#E0F2F1</color>
     <color name="blue_600">#1E88E5</color>
-    <color name="colorPrimary">#2196F3</color>
-    <color name="colorAccent">#FF5722</color>
-    <color name="colorLime">#CDDC39</color>
-    <color name="colorPurple">#9C27B0</color>
-    <color name="gray">#9E9E9E</color>
+    <color name="electricBlue">#2196F3</color>
+    <color name="brightOrange">#FF5722</color>
+    <color name="freshLime">#CDDC39</color>
+    <color name="brightPurple">#9C27B0</color>
+    <color name="offWhite">#F5F5F5</color>
+
 
 </resources>

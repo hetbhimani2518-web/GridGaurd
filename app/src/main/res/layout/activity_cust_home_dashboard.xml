@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/teal_50"
     tools:context=".cust_home_dashboard">
 
     <androidx.core.widget.NestedScrollView
@@ -32,11 +33,11 @@
                 android:id="@+id/layoutGreeting"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imgProfile"
-                app:layout_constraintTop_toTopOf="@id/imgProfile"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toTopOf="@id/imgProfile">
 
                 <TextView
                     android:id="@+id/tvGreeting_name"
@@ -50,12 +51,11 @@
                     android:id="@+id/tvGreeting_customerid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="@string/dummy_gretting_2"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="2dp" />
+                    android:textStyle="bold" />
             </LinearLayout>
-
 
             <!-- Current Outage Status Card -->
             <androidx.cardview.widget.CardView
@@ -65,6 +65,7 @@
                 android:layout_marginTop="16dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp"
+                android:backgroundTint="@color/offWhite"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imgProfile">
@@ -85,12 +86,17 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnReportOutage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/report_new_outage"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#877A73"
+                        app:cornerRadius="12dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvOutageStatus" />
 
@@ -99,35 +105,37 @@
             </androidx.cardview.widget.CardView>
 
             <!-- Quick Actions Grid (Responsive) -->
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/quickActionsContainer"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                app:alignmentMode="alignMargins"
+                app:columnCount="2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardOutage">
+                app:layout_constraintTop_toBottomOf="@id/cardOutage"
+                app:orientation="horizontal"
+                app:rowCount="3"
+                app:rowOrderPreserved="false"
+                app:useDefaultMargins="true">
 
-                <!-- First Row -->
+                <!-- Report Outage -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardReportOutage"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintEnd_toStartOf="@id/cardTrackComplaints"
-                    app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:backgroundTint="@color/offWhite"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        tools:ignore="UseCompoundDrawables">
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
                         <ImageView
                             android:layout_width="40dp"
@@ -138,207 +146,180 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/report_outage"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
 
+                <!-- History -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardTrackComplaints"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/cardHistory"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/cardReportOutage"
-                    app:layout_constraintTop_toTopOf="@id/cardReportOutage">
+                    android:backgroundTint="@color/offWhite"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        tools:ignore="UseCompoundDrawables"
-                        android:padding="16dp">
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:contentDescription="@string/history"
                             android:src="@drawable/history_report" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/history"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Second Row -->
+                <!-- View Bill -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardViewBill"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintEnd_toStartOf="@id/cardHistory"
-                    app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/cardReportOutage">
+                    android:backgroundTint="@color/offWhite"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        tools:ignore="UseCompoundDrawables"
-                        android:padding="16dp">
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:contentDescription="@string/view_bill"
                             android:src="@drawable/invoice" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/view_bill"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+                <!-- Track Complaints -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardHistory"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/cardTrackComplaints"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="12dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/cardViewBill"
-                    app:layout_constraintTop_toBottomOf="@id/cardTrackComplaints">
+                    android:backgroundTint="@color/offWhite"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        tools:ignore="UseCompoundDrawables"
-                        android:padding="16dp">
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:contentDescription="@string/track_complaints"
                             android:src="@drawable/progress" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/track_complaints"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
 
-                <!-- Second Row -->
+                <!-- Customer Care -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewAlerts"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/cardCustomerCare"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="8dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/cardViewBill">
+                    android:backgroundTint="@color/offWhite"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        tools:ignore="UseCompoundDrawables">
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:contentDescription="@string/customer_care"
                             android:src="@drawable/customer_care" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/customer_care"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-
                 </androidx.cardview.widget.CardView>
 
+                <!-- Alerts -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewAlerts1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/cardAlerts"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="12dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_weight="1"
-                    app:layout_constraintStart_toEndOf="@id/cardViewAlerts"
-                    app:layout_constraintTop_toBottomOf="@id/cardHistory">
+                    android:backgroundTint="@color/offWhite"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        tools:ignore="UseCompoundDrawables">
+                        android:orientation="vertical"
+                        android:padding="12dp">
 
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:contentDescription="@string/alerts"
                             android:src="@drawable/alert_outage" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/alerts"
+                            android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.gridlayout.widget.GridLayout>
 
             <!-- Recent Activity Card -->
             <androidx.cardview.widget.CardView
@@ -347,6 +328,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:cardCornerRadius="12dp"
+                android:backgroundTint="@color/offWhite"
                 app:cardElevation="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -398,17 +380,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Floating Action Button -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabReport"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/report_outage"
-        android:src="@drawable/add_report"
-        app:layout_anchor="@id/bottomNav"
-        app:layout_anchorGravity="top|end" />
-
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
@@ -416,5 +387,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_nav_menu" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
