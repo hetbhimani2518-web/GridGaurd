@@ -48,5 +48,7 @@
     <string name="complaint_12345">Complaint #12345</string>
     <string name="status_in_progress">Status: In Progress</string>
     <string name="important_scheduled_maintenance_on_28th_sept_from_10_am_to_2_pm">Important: Scheduled maintenance on 28th Sept from 10 AM to 2 PM.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_cream"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
-    tools:context=".cust_home_dashboard">
+    tools:context=".UserHomeFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -114,12 +112,14 @@
                 app:useDefaultMargins="true">
 
                 <!-- Report Outage -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardReportOutage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/offWhite"
                     app:cardCornerRadius="16dp"
+                    android:backgroundTint="@color/offWhite"
+                    app:strokeColor="@color/background_cream"
+                    app:strokeWidth="2dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
 
@@ -145,14 +145,16 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- History -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardHistory"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/offWhite"
+                    app:strokeColor="@color/background_cream"
+                    app:strokeWidth="2dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
@@ -178,14 +180,16 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- View Bill -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardViewBill"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/offWhite"
+                    app:strokeColor="@color/background_cream"
+                    app:strokeWidth="2dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
@@ -211,14 +215,16 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Track Complaints -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardTrackComplaints"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/offWhite"
+                    app:strokeColor="@color/background_cream"
+                    app:strokeWidth="2dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
@@ -244,14 +250,16 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Customer Care -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardCustomerCare"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/offWhite"
+                    app:strokeColor="@color/background_cream"
+                    app:strokeWidth="2dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
@@ -277,14 +285,16 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Alerts -->
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardAlerts"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/offWhite"
+                    app:strokeColor="@color/background_cream"
+                    app:strokeWidth="2dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
@@ -310,7 +320,7 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
             </androidx.gridlayout.widget.GridLayout>
 
@@ -321,6 +331,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="@color/offWhite"
+                app:strokeColor="@color/background_cream"
+                app:strokeWidth="2dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -355,7 +367,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="#FF0000"
+                android:background="#FF4848"
                 android:ellipsize="marquee"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
@@ -366,6 +378,7 @@
                 android:text="@string/important_scheduled_maintenance_on_28th_sept_from_10_am_to_2_pm"
                 android:textColor="#000000"
                 android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardRecentActivity" />
@@ -374,4 +387,4 @@
 
     </androidx.core.widget.NestedScrollView>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

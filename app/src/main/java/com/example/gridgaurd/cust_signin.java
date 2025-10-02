@@ -40,7 +40,7 @@ public class cust_signin extends AppCompatActivity {
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(cust_signin.this , cust_home_dashboard.class);
+                Intent intent = new Intent(cust_signin.this , MainActivity.class);
                 startActivity(intent);
                 finish();
             }
